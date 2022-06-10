@@ -1,0 +1,7 @@
+{
+  "updated": "2022-06-10T23:42:47.1989765+02:00",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "missing": {}
+}
