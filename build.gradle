@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+compileJava {
+    sourceCompatibility '11'
+    targetCompatibility '11'
+}
+
+group 'com.github.fhirvaccinationpass'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def ibmFhirVersion = '4.11.1'
+    implementation "com.ibm.fhir:fhir-model:${ibmFhirVersion}"
+    implementation "com.ibm.fhir:fhir-registry:${ibmFhirVersion}"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
